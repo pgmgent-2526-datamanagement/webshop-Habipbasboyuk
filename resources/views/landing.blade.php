@@ -33,12 +33,12 @@
                 <h2 class="info-collection-title">A Statement Of Elegance</h2>
                 <p class="info-collection-description">A ChronoLux watch is more than a timepiece—it's a symbol of refined taste and sophisticated style. Designed to complement your lifestyle, from boardroom to ballroom.</p>
                 <p class="info-collection-description">Experience the perfect fusion of form and function, where every glance at your wrist reminds you of the exceptional craftsmanship you carry.</p>
-                <a class="landing__cta landing__cta--collection" href="">View Collection</a>
+                <a class="btn" href="">View Collection</a>
             </div>
             <div class="info-collection-image-wrapper">
                 <img class="info-collection-image" src="{{ asset('images/web/making_watch.png') }}" alt="Watch Image">
             </div>
-            <a class="landing__cta landing__cta--shop" href="">Shop Now</a>
+            <a class="btn" href="">Shop Now</a>
         </section>
 
     @include('components.footer')

@@ -23,3 +23,28 @@
     }
 
 }
+
+
+.info-collection-content {
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.info-collection-image-wrapper {
+    margin: 2rem 0rem;
+    height: 20%;
+}
+
+.info-collection-image {
+    width: 80%;
+    height: auto;
+    max-height: 10rem;
+    display: block;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    object-fit: cover;
+    object-position: 25% 25%;
+    margin: 0 auto;
+}
