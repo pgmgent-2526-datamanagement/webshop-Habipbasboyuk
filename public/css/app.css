@@ -1,0 +1,47 @@
+@import 'header.css';
+@import 'landing.css';
+@import 'recommended.css';
+
+body {
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+
+    font-family: 'Genos', sans-serif;
+}
+
+
+:root {
+    --bg-color: #ffffff;
+    --fg-color: #D9D9D9;
+    --text-color: #333333;
+    --accent-color: #4A5F6A;
+
+    /* margin */
+    --margin-small: 8px;
+    --margin-medium: 16px;
+    --margin-large: 24px;
+
+    /* padding */
+    --padding-small: 8px;
+    --padding-medium: 16px;
+    --padding-large: 24px;
+    /* border radius */
+    --border-radius: 8px;
+    --border-radius-small: 4px;
+    --border-radius-large: 12px;
+    --border-full: 25px;
+}
+
+.btn {
+    border: 2px solid black;
+    padding: 0.5rem 1.5rem;
+
+    font-size: 1.2rem;
+    font-family: 'Genos';
+    color: black;
+    text-decoration: none;
+}
+

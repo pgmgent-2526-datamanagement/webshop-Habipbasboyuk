@@ -1,0 +1,22 @@
+.landing__image-wrapper {
+    display: none;
+}
+
+.landing__section--boosters {
+    padding-top: 3rem;
+    background-color: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .landing__title {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 0.6;
+        text-align: center;
+        color: var(--text-color);
+        margin-top: var(--margin-large);
+        margin-bottom: var(--margin-large);
+    }
+}

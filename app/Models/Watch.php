@@ -15,6 +15,7 @@ class Watch extends Model
         'name',
         'brand', 
         'price',
-        'description'
+        'description',
+        'image'
     ];
 }

@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--fg-color);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    .header__title {
+        font-size: 1.5rem;
+        color: var(--text-color);
+        margin: 0;
+    }
+    .header__hamburger {
+        width: 2rem;
+    }
+}
+
+.desktop-only {
+    display: none;
+}

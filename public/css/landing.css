@@ -1,0 +1,25 @@
+.landing__section {
+    background-image: url('../images/web/hero-mobile.jpg');
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.418);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+
+
+    .landing__intro-text {
+        position: absolute;
+        font-size: 3rem;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--text-color);
+        padding: var(--padding-medium);
+        line-height: 0.6;
+    }
+
+}
