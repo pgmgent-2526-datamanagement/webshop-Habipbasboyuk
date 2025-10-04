@@ -9,5 +9,6 @@
             <li class="header__nav-item"><a class="header__nav-link" href="/admin">Shopping bag</a></li>
         </ul>
     </nav>
-    <img class="header__hamburger" src="images/web/hamburger-sign.svg" alt="Header Image">
+    <!-- SVG Image hamburger -->
+    <img class="header__hamburger-img mobile-only" src="<?= asset('images/web/hamburger-sign.svg') ?>" alt="Header Image">
 </header>

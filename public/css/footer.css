@@ -1,0 +1,42 @@
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+
+
+    .footer__main {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+
+}
+
+.footer__brand {
+    line-height: 0.8;
+
+    .footer__brand-title {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+
+    .footer__brand-subtitle {
+        margin: 0;
+    }
+}
+
+.footer__heading {
+    margin: 0;
+}
+
+.footer__item {
+    margin: 0;
+}
+
+.footer__copyright {
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid white;
+    margin: 0;
+}

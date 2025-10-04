@@ -8,7 +8,7 @@
     height: 100vh;
     position: relative;
     margin: 0;
-
+    background-attachment: fixed; /* Parallax effect */
 
     .landing__intro-text {
         position: absolute;
@@ -21,7 +21,6 @@
         padding: var(--padding-medium);
         line-height: 0.6;
     }
-
 }
 
 
@@ -47,4 +46,10 @@
     object-fit: cover;
     object-position: 25% 25%;
     margin: 0 auto;
+}
+
+@media (min-width: 50rem) {
+    .landing__section {
+        background-image: url('../images/web/hero.png');
+    }
 }

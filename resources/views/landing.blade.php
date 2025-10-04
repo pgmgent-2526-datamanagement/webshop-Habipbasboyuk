@@ -38,7 +38,6 @@
             <div class="info-collection-image-wrapper">
                 <img class="info-collection-image" src="{{ asset('images/web/making_watch.png') }}" alt="Watch Image">
             </div>
-            <a class="btn" href="">Shop Now</a>
         </section>
 
     @include('components.footer')
