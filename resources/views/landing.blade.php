@@ -20,11 +20,13 @@
             <div class="landing__image-wrapper">
                 <img class="landing__image" src="{{ asset('images/web/blue_watch_dark_bg.png') }}" alt="Style Boosters">
             </div>
-            <h2 class="landing__title">STYLE <br> BOOSTERS</h2>
-            <div class="landing__watches">
-                
+            <div class="boosers__content">
+                <h2 class="landing__title">STYLE <br> BOOSTERS</h2>
+                <div class="landing__watches">
+                    
+                </div>
+                <a class="btn" href="">All Watches > </a>
             </div>
-            <a class="btn" href="">All Watches > </a>
         </section>
 
         <section class="info-collection">

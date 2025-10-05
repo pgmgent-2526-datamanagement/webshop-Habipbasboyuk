@@ -43,7 +43,7 @@
 }
 .mobile-only {
     display: block;
-    margin-right: 3rem; /* Debug - tijdelijk */
+    margin-right: 3rem;
 }
 
 @media (min-width: 50rem) {

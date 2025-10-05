@@ -2,6 +2,7 @@
 @import 'landing.css';
 @import 'recommended.css';
 @import 'footer.css';
+@import 'find.css';
 
 body {
     font-family: var(--font-sans);

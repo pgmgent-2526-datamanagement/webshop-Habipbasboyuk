@@ -7,7 +7,6 @@
     background-color: var(--bg-color);
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
 
     .landing__title {
@@ -18,5 +17,31 @@
         color: var(--text-color);
         margin-top: var(--margin-large);
         margin-bottom: var(--margin-large);
+    }
+}
+
+@media(min-width: 50rem) {
+    .landing__section--boosters {
+        display: flex;
+        padding: 0;
+    }
+
+    .landing__image-wrapper {
+        display: block;
+        flex: 1;
+        height: 100%;
+        
+        .landing__image {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    .boosers__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
     }
 }
