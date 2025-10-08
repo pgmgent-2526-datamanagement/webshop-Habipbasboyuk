@@ -48,6 +48,29 @@
     margin: 0 auto;
 }
 
+.landing__watch-image {
+    width: 8rem;
+    mix-blend-mode: multiply;
+    
+}
+
+.landing__watches {
+    display: flex;
+    gap: 2rem;
+}
+
+.landing__watch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .landing__watch-name, .landing__watch-price {
+        margin: 0;
+    }
+}
+
 @media (min-width: 50rem) {
 
     .landing__section {

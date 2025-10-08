@@ -6,3 +6,5 @@ use App\Http\Controllers\FindController;
 
 Route::get('/', [WatchController::class, 'index']);
 Route::get('/findwatch', [FindController::class, 'index']);
+
+Route::get('/watches/{watch}', [WatchController::class, 'show'])->name('watches.show');

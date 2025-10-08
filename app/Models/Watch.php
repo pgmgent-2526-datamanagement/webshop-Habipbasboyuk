@@ -18,4 +18,9 @@ class Watch extends Model
         'description',
         'image'
     ];
+
+        public function image()
+    {
+        return $this->hasOne(\App\Models\Image::class, 'watch_id');
+    }
 }

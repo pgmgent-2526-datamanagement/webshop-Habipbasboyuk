@@ -1,4 +1,51 @@
-.main__find {
+.find-watch {
     padding-top: 8rem;
     height: 100vh;
+
+    text-align: center;
+}
+
+.find-watch__intro {
+    background-color: var(--fg-color);
+    margin: var(--margin-large);
+    padding: var(--padding-medium);
+}
+
+.find-watch__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.find-watch__filter {
+    background-color: var(--bg-color);
+    padding: 0.2rem;
+    border: none;
+    width: 25%;
+}
+
+.find-watch__or {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.find-watch__search-input {
+    border: 1px black solid;
+    padding: 0.5rem;
+    background-color: var(--fg-color);
+
+}
+
+.find-watch__search-button {
+    padding: 0.5rem;
+    background-color: var(--fg-color);
+    border: 1px black solid;
+}
+
+.find-watch__results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }

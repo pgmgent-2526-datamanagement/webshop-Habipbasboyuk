@@ -3,6 +3,7 @@
 @import 'recommended.css';
 @import 'footer.css';
 @import 'find.css';
+@import 'articlecard.css';
 
 body {
     font-family: var(--font-sans);

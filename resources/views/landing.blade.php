@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Welcome</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ \Carbon\Carbon::now()->timestamp }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,13 +17,26 @@
         </section>
 
         <section class="landing__section--boosters">
-            <div class="landing__image-wrapper">
+            <div class="landing__image-wrapper parallax">
                 <img class="landing__image" src="{{ asset('images/web/blue_watch_dark_bg.png') }}" alt="Style Boosters">
             </div>
             <div class="boosers__content">
                 <h2 class="landing__title">STYLE <br> BOOSTERS</h2>
                 <div class="landing__watches">
-                    
+@foreach ($watches as $watch )
+    <div class="landing__watch">
+        
+            @php
+                $filename = $watch->image->filename;
+                $src = \Illuminate\Support\Str::startsWith($filename, ['http://', 'https://'])
+                    ? $filename
+                    : asset('storage/' . ltrim($filename, '/'));
+            @endphp
+            <img class="landing__watch-image" src="{{ $src }}" alt="{{ $watch->name }}">
+        <p class="landing__watch-name">{{ $watch->name }}</p>
+        <p class="landing__watch-price">${{ number_format($watch->price, 2) }}</p>
+    </div>
+@endforeach
                 </div>
                 <a class="btn" href="">All Watches > </a>
             </div>

@@ -1,0 +1,22 @@
+.articlecard-section {
+    background-color: var(--accent-color);
+    padding: 0.5rem;
+}
+
+.article__title, .article__price {
+    margin: 0;
+    color: white;
+    text-align: left;
+    font-size: 0.6rem;
+}
+
+.article__price {
+    word-spacing: 0.5rem;
+}
+
+.article-card {
+    width: max-content;
+
+    background-color: var(--fg-color);
+    
+}
