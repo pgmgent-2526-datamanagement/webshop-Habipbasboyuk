@@ -49,3 +49,22 @@
     gap: 1rem;
     justify-content: center;
 }
+
+.add-to-cart-form {
+    width: max-content;
+}
+
+.add-to-cart__btn {
+    padding: 0.2rem 0.8rem !important;
+    border: 2px solid white !important;
+    background-color: transparent;
+    color: white !important;
+    margin-top: 0.5rem;
+    
+    &&:hover {
+        background-color: white;
+        color: black !important;
+        transition: 0.3s;
+    }
+}
+

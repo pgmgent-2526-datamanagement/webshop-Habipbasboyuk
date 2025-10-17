@@ -1,0 +1,18 @@
+.register__body {
+    height: 100vh;
+}
+
+.register__container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.register__input {
+    display: block;
+    width: 100%;
+    padding: var(--padding-small);
+    margin-bottom: var(--margin-medium);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-small);
+    font-size: 1rem;
+}

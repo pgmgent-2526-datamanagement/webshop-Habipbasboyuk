@@ -1,0 +1,38 @@
+.login {
+    height: 100vh;
+}
+
+.login__section {
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login__form {
+    width: 100%;
+}
+
+.login__input {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: var(--padding-small);
+    margin-bottom: var(--margin-medium);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius-small);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+
+.login__button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: var(--padding-small);
+    border: none;
+    border-radius: var(--border-radius-small);
+}

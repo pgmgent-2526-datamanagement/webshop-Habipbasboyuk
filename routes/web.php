@@ -3,8 +3,42 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WatchController;
 use App\Http\Controllers\FindController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [WatchController::class, 'index']);
 Route::get('/findwatch', [FindController::class, 'index']);
 
 Route::get('/watches/{watch}', [WatchController::class, 'show'])->name('watches.show');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
+
+// logout (optioneel)
+Route::post('/logout', function (Request $request) {
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+})->name('logout');
+
+Route::get('/register', [RegisterController::class, 'show'])
+    ->name('register')
+    ->middleware('guest');
+
+Route::post('/register', [RegisterController::class, 'store'])
+    ->name('register.store')
+    ->middleware('guest');
+    
+
+use App\Http\Controllers\CartController;
+
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');

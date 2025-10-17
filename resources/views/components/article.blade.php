@@ -16,5 +16,12 @@
         @if($price)
             <p class="article__price">EUR{{ $price }}</p>
         @endif
+
+        <form method="POST" class="add-to-cart-form" action="{{ route('cart.add') }}">
+    @csrf
+    <input type="hidden" name="watch_id" value="{{ $watch->id }}">
+    <input type="hidden" name="amount" value="1">
+    <button type="submit" class="btn add-to-cart__btn">Add to cart</button>
+</form>
     </section>
 </article>

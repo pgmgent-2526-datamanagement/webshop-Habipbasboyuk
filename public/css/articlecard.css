@@ -1,13 +1,15 @@
 .articlecard-section {
     background-color: var(--accent-color);
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
+    line-height: 0.8;
+    
 }
 
 .article__title, .article__price {
     margin: 0;
     color: white;
     text-align: left;
-    font-size: 0.6rem;
+    font-size: 1rem;
 }
 
 .article__price {
@@ -15,8 +17,9 @@
 }
 
 .article-card {
-    width: max-content;
-
+    width: 40%;
+    max-width: 13rem;
     background-color: var(--fg-color);
+    font-weight: 500;
     
 }

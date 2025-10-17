@@ -6,6 +6,9 @@
     <title>Find Watch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ \Carbon\Carbon::now()->timestamp }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     @include('components/header')
@@ -40,7 +43,7 @@
         </section>
 
         <section class="find-watch__results">
-            @foreach($watches as $watch)
+@foreach($watches as $watch)
     @php
         $filename = $watch->image->filename ?? null;
         $src = \Illuminate\Support\Str::startsWith($filename, ['http://','https://'])
@@ -53,7 +56,8 @@
         :image="$src"
         :excerpt="$watch->description"
         :price="$watch->price"
-        :url="route('watches.show', $watch->id ?? $watch->slug ?? '#')"
+        :watch="$watch"
+        :url="route('watches.show', $watch->id)"
         class="find-watch__result"
     />
 @endforeach

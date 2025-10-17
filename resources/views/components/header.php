@@ -6,7 +6,7 @@
             <li class="header__nav-item"><a class="header__nav-link" href="/findwatch">Find a Watch</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/about">Promotions</a></li>
             <li class="header__nav-item"><a class="header__nav-link" href="/contact">Wishlist</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="/admin">Shopping bag</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/cart">Shopping bag</a></li>
         </ul>
     </nav>
     <!-- SVG Image hamburger -->
