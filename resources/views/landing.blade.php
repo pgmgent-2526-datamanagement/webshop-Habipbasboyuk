@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ \Carbon\Carbon::now()->timestamp }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    @include('components.header')
-
-    <main>
+<x-layout>
+    <main >
 
         <section class="landing__section landing__section--intro">
             <p class="landing__intro-text">Unleash <br> Your Style</p>
@@ -27,10 +16,20 @@
     <div class="landing__watch">
         
             @php
-                $filename = $watch->image->filename;
-                $src = \Illuminate\Support\Str::startsWith($filename, ['http://', 'https://'])
-                    ? $filename
-                    : asset('storage/' . ltrim($filename, '/'));
+                // Safely get filename (handle null image) and provide a fallback image
+                $filename = null;
+                if (isset($watch->image) && isset($watch->image->filename)) {
+                    $filename = $watch->image->filename;
+                }
+
+                if ($filename) {
+                    $src = \Illuminate\Support\Str::startsWith($filename, ['http://', 'https://'])
+                        ? $filename
+                        : asset('storage/' . ltrim($filename, '/'));
+                } else {
+                    // fallback to a local asset if no image is associated
+                    $src = asset('images/web/blue_watch_dark_bg.png');
+                }
             @endphp
             <img class="landing__watch-image" src="{{ $src }}" alt="{{ $watch->name }}">
         <p class="landing__watch-name">{{ $watch->name }}</p>
@@ -54,7 +53,5 @@
                 <img class="info-collection-image" src="{{ asset('images/web/making_watch.png') }}" alt="Watch Image">
             </div>
         </section>
-
-    @include('components.footer')
-</body>
-</html>
+    </main>
+</x-layout>

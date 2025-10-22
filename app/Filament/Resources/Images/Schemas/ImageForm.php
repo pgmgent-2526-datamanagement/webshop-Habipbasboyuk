@@ -3,6 +3,8 @@
 namespace App\Filament\Resources\Images\Schemas;
 
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Schemas\Schema;
 
 class ImageForm
@@ -11,11 +13,15 @@ class ImageForm
     {
         return $schema
             ->components([
-                TextInput::make('filename')
-                    ->required(),
-                TextInput::make('watch_id')
-                    ->numeric()
-                    ->default(null),
+                FileUpload::make('filename')
+                    ->required()
+                    ->directory('products') 
+                    ->disk('public') 
+                    ->image(),
+                Select::make('watch_id')
+    ->relationship(name: 'watch', titleAttribute: 'name'),
+                
             ]);
     }
 }
+

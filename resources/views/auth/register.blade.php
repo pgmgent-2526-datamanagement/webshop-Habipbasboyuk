@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Register</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body class="register__body">
+<x-layout>
     <main class="register">
         <section class="register__container">
 
@@ -70,5 +63,4 @@
             </form>
         </section>
     </main>
-</body>
-</html>
+</x-layout>

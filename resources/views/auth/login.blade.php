@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
+    <x-layout>
     <main class="login">
         <section class="login__section">
             <h1 class="login__title">Login</h1>
@@ -33,5 +26,4 @@
             </form>
         </section>
     </main>
-</body>
-</html>
+</x-layout>

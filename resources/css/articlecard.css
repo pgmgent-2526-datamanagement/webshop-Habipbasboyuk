@@ -23,3 +23,7 @@
     font-weight: 500;
     
 }
+
+.article__image {
+    width: 10rem;
+}

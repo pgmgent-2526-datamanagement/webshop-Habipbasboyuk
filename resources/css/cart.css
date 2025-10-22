@@ -8,6 +8,8 @@
 
 .cart__products {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart__product {
@@ -58,6 +60,7 @@
     }
 
     button {
+        padding: 0 !important;
         background: none;
         border: none;
         color: white;
@@ -66,7 +69,7 @@
     }
 }
 
-.cart__not-logged-in {
+.cart__not-logged-in, .cart__empty-message {
     position: absolute;
     top: 50%;
     left: 50%;

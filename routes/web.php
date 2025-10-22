@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [WatchController::class, 'index']);
 Route::get('/findwatch', [FindController::class, 'index']);
 
-Route::get('/watches/{watch}', [WatchController::class, 'show'])->name('watches.show');
+Route::get('/watches/{watch}', [WatchController::class, 'show'])->name('detailwatch');
 
 Route::get('/login', function () {
     return view('auth.login');
@@ -42,3 +42,6 @@ use App\Http\Controllers\CartController;
 
 Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+
+Route::post('/cart/increase', [CartController::class, 'increase'])->name('cart.increase');
+Route::post('/cart/decrease', [CartController::class, 'decrease'])->name('cart.decrease');

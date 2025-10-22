@@ -1,13 +1,14 @@
-@import 'header.css';
-@import 'landing.css';
-@import 'recommended.css';
-@import 'footer.css';
-@import 'find.css';
-@import 'articlecard.css';
-@import 'cart.css';
-@import 'summary.css';
-@import 'auth/register.css';
-@import 'auth/login.css';
+@import './header.css';
+@import './landing.css';
+@import './recommended.css';
+@import './footer.css';
+@import './find.css';
+@import './articlecard.css';
+@import './cart.css';
+@import './summary.css';
+@import './detail.css';
+@import './auth/register.css';
+@import './auth/login.css';
 
 body {
     font-family: var(--font-sans);
@@ -17,6 +18,11 @@ body {
     background-color: #f9f9f9;
 
     font-family: 'Genos', sans-serif;
+}
+
+main {
+    padding-top: 5rem;
+    height: 100vh;
 }
 
 

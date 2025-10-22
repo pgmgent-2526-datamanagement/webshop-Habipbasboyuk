@@ -8,8 +8,13 @@ class WatchController extends Controller
 {
     public function index()
     {
-        $watches = Watch::with('image')->get();
+        $watches = Watch::with('images')->get();
         
         return view('landing', compact('watches'));
+    }
+
+    public function show($id) {
+        $watch = Watch::with('images')->findOrFail($id);
+        return view('detailwatch', compact('watch'));
     }
 }

@@ -36,10 +36,8 @@ class CartController extends Controller
         if (Auth::check()) {
             $where = ['user_id' => $userId, 'watch_id' => $watchId];
 
-            // Probeer eerst te incrementen met een where (werkt zonder id PK)
             $updated = DB::table('cartitems')->where($where)->increment('amount', $qty);
 
-            // Als er niets geupdate werd, insert een nieuwe rij met timestamps
             if (! $updated) {
                 DB::table('cartitems')->insert(array_merge($where, [
                     'amount' => $qty,
@@ -49,6 +47,45 @@ class CartController extends Controller
             }
         } 
 
+
+
         return back()->with('success', 'Added to cart');
     }
+
+    public function increase(Request $request)
+{
+    $data = $request->validate(['watch_id' => 'required|exists:watches,id']);
+    $userId = Auth::id();
+    $where = ['user_id' => $userId, 'watch_id' => $data['watch_id']];
+
+    $updated = DB::table('cartitems')->where($where)->increment('amount', 1);
+
+    if (! $updated) {
+        DB::table('cartitems')->insert(array_merge($where, [
+            'amount' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]));
+    }
+
+    return back()->with('success', 'Updated cart');
+}
+
+public function decrease(Request $request)
+{
+    $data = $request->validate(['watch_id' => 'required|exists:watches,id']);
+    $userId = Auth::id();
+    $where = ['user_id' => $userId, 'watch_id' => $data['watch_id']];
+
+    $item = DB::table('cartitems')->where($where)->first();
+    if ($item) {
+        if ($item->amount > 1) {
+            DB::table('cartitems')->where($where)->decrement('amount', 1);
+        } else {
+            DB::table('cartitems')->where($where)->delete();
+        }
+    }
+
+    return back()->with('success', 'Updated cart');
+}
 }

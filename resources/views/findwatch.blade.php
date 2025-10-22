@@ -1,18 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Find Watch</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ \Carbon\Carbon::now()->timestamp }}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    @include('components/header')
-
+<x-layout>
     <main class="find-watch">
         <h1 class="find-watch__title">Find Your Watch</h1>
 
@@ -57,13 +44,10 @@
         :excerpt="$watch->description"
         :price="$watch->price"
         :watch="$watch"
-        :url="route('watches.show', $watch->id)"
+        :url="route('detailwatch', $watch->id)"
         class="find-watch__result"
     />
 @endforeach
         </section>
     </main>
-
-    @include('components/footer')
-</body>
-</html>
+</x-layout>
