@@ -15,6 +15,13 @@ class WatchController extends Controller
 
     public function show($id) {
         $watch = Watch::with('images')->findOrFail($id);
-        return view('detailwatch', compact('watch'));
+
+        $relatedWatches = Watch::with('images')
+        ->where('id', '!=', $id)
+        ->inRandomOrder()
+        ->limit(4)
+        ->get();
+
+        return view('detailwatch', compact('watch', 'relatedWatches'));
     }
 }

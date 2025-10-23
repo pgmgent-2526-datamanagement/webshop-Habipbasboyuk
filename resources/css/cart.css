@@ -24,6 +24,7 @@
 .cart__product-image {
     width: 8rem;
     object-fit: cover;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .cart__product-info {

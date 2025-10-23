@@ -3,13 +3,18 @@
     color: var(--footer-text);
 
 
+
+    /* keep footer from shrinking and allow it to be pushed to the bottom */
+    flex-shrink: 0;
+    margin-top: auto;
+    width: 100%;
     .footer__main {
         display: flex;
         justify-content: space-between;
         padding: 1rem;
     }
 
-
+    
 }
 
 .footer__brand {

@@ -1,0 +1,45 @@
+
+.detail__related {
+    color: white;
+
+    .detail__related-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+.related-watches {
+    display: flex;
+    justify-content: center;
+}
+
+
+.related-watches__item {
+    width: max-content;
+
+    .related-watches__image {
+        width: 15rem;
+    }
+
+}
+
+.related-watches__item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.8s ease;
+}
+.related-watches__info {
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    p, h3 {
+        margin: 0;
+    }
+
+}
+
+.related-watches__link {
+    text-decoration: none;
+    display: inline-block;
+    width: max-content;
+}

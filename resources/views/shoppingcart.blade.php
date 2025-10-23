@@ -8,10 +8,9 @@
                         <article class="cart__product">
 
                             @php
-                                // Safely get filename from possible structures and provide a fallback
-                                $filename = data_get($item, 'watch.image.filename') ?? null;
-                                $src = null;
+                                $filename = data_get($item, 'watch.images.0.filename');
 
+                                $src = null;
                                 if ($filename) {
                                     $src = \Illuminate\Support\Str::startsWith($filename, ['http://', 'https://'])
                                         ? $filename

@@ -21,7 +21,7 @@ Route::get('/login', function () {
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 
-// logout (optioneel)
+
 Route::post('/logout', function (Request $request) {
     Auth::logout();
     $request->session()->invalidate();
