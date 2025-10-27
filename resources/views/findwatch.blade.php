@@ -22,10 +22,10 @@
 
                 <p class="find-watch__or">Or</p>
 
-                <form class="find-watch__search" action="#" method="get">
-                    <input class="find-watch__search-input" type="search" name="q" placeholder="Type your watch">
-                    <button class="find-watch__search-button" type="submit">Search &gt;</button>
-                </form>
+                <form class="find-watch__search" action="{{ route('watches.find') }}" method="get">
+                     <input class="find-watch__search-input" type="search" name="q" placeholder="Type your watch">
+                     <button class="find-watch__search-button" type="submit">Search &gt;</button>
+                 </form>
             </div>
         </section>
 

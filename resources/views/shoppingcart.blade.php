@@ -64,7 +64,7 @@
                         {{ $items->sum(fn($item) => $item->watch->price * $item->amount) }}</span></p>
 
                 <div class="cart__summary-actions">
-                    <button class="btn btn--checkout">Proceed to Checkout</button>
+                    <a href="/checkout" class="btn btn--checkout">Proceed to Checkout</a>
                     <button class="btn btn--continue-shopping">Continue Shopping</button>
                 </div>
             </section>

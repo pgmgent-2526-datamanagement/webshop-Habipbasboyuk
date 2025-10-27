@@ -25,7 +25,6 @@
 }
 
 
-
 .btn--checkout, .btn--continue-shopping {
     margin-bottom: 0.3rem;
     width: 100%;
@@ -34,7 +33,13 @@
     font-weight: 700;
 }
 .btn--checkout {
+    display: inline-block !important;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100% !important;
     color: var(--rare-color) !important;
+    background-color: white !important;
+    width: 100% !important;
 }
 
 .btn--continue-shopping {

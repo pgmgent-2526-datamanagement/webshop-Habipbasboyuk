@@ -6,6 +6,12 @@ use App\Models\Watch;
 
 class WatchController extends Controller
 {
+    public function landing() {
+        
+        $watches = Watch::with('images')->inRandomOrder()->limit(6)->get();
+        return view('landing', compact('watches'));
+    }
+
     public function index(Request $request)
     {
             $q = trim($request->query('q', ''));
@@ -19,7 +25,7 @@ class WatchController extends Controller
             ->paginate(20)
             ->withQueryString();
 
-        return view('landing', compact('watches'));
+        return view('findwatch', compact('watches'));
     }
 
     public function show($id) {

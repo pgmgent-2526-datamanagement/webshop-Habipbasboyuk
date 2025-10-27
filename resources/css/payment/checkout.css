@@ -1,0 +1,46 @@
+.main__checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    font-size: 2rem;
+}
+
+.checkout__shipping, .checkout_section {
+    height: 60%;
+}
+
+
+.checkout__shipping {
+    background-color: var(--rare-color); 
+    color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius)
+}
+
+.checkout_section {
+    background-color: var(--fg-color);
+    padding: 1rem;
+    border-radius: var(--border-radius)
+}
+
+
+
+.checkout__form {
+    display: flex;
+    justify-content: center;
+}
+
+.checkout__button {
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+    
+    &:hover {
+        background-color: var(--rare-color);
+        color: white;
+        transition: 0.6s;
+    }
+
+}

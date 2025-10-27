@@ -10,6 +10,8 @@
 @import './related.css';
 @import './auth/register.css';
 @import './auth/login.css';
+@import './payment/checkout.css';
+@import './payment/succespage.css';
 
 body {
     font-family: var(--font-sans);

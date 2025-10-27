@@ -9,7 +9,6 @@
                             $src = null;
 
                             if ($filename) {
-                                // 1) try storage symlink: public/storage/...
                                 if (file_exists(public_path('storage/' . $filename))) {
                                     $src = asset('storage/' . $filename);
                                 }

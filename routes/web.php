@@ -10,7 +10,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/', [WatchController::class, 'index']);
+Route::get('/', [WatchController::class, 'landing'])->name('home');
 Route::get('/findwatch', [FindController::class, 'index']);
 Route::get('/find', [WatchController::class, 'index'])->name('watches.find');
 
@@ -46,3 +46,10 @@ Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 Route::post('/cart/increase', [CartController::class, 'increase'])->name('cart.increase');
 Route::post('/cart/decrease', [CartController::class, 'decrease'])->name('cart.decrease');
+
+use App\Http\Controllers\PaymentController;
+
+Route::get('/checkout', [PaymentController::class, 'checkout'])->name('checkout');
+Route::post('/payment', [PaymentController::class, 'createPayment'])->name('payment.create');
+Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
+Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
