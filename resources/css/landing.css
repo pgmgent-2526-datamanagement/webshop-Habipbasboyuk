@@ -1,5 +1,5 @@
 .landing__section {
-    background-image: url('../images/web/hero-mobile.jpg');
+    background-image: url('/storage/app/public/web/hero-mobile.jpg');
     background-blend-mode: lighten;
     background-color: rgba(255, 255, 255, 0.418);
     background-size: cover;
@@ -74,7 +74,7 @@
 @media (min-width: 50rem) {
 
     .landing__section {
-        background-image: url('../images/web/hero.png');
+        background-image: url('/storage/app/public/web/hero.png');
     }
     .info-collection {
         display: flex;

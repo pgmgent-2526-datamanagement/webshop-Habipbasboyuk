@@ -22,7 +22,8 @@ body {
 }
 
 main {
-    padding-top: 5rem;
+    padding-top: var(--header-height, 5rem);
+    min-height: calc(100vh - var(--header-height, 5rem));
 }
 html, body {
     height: 100%;
@@ -52,6 +53,8 @@ html, body {
     --border-radius-small: 4px;
     --border-radius-large: 12px;
     --border-full: 25px;
+
+    --header-height: 3rem;
 }
 
 .btn {

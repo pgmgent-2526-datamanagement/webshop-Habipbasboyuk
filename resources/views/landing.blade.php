@@ -7,7 +7,7 @@
 
         <section class="landing__section--boosters">
             <div class="landing__image-wrapper parallax">
-                <img class="landing__image" src="{{ asset('images/web/blue_watch_dark_bg.png') }}" alt="Style Boosters">
+                <img class="landing__image" src="{{ asset('storage/web/blue_watch_dark_bg.png') }}" alt="Style Boosters">
             </div>
             <div class="boosers__content">
                 <h2 class="landing__title">STYLE <br> BOOSTERS</h2>
@@ -16,20 +16,13 @@
     <div class="landing__watch">
         
             @php
-                // Safely get filename (handle null image) and provide a fallback image
-                $filename = null;
-                if (isset($watch->image) && isset($watch->image->filename)) {
-                    $filename = $watch->image->filename;
-                }
-
-                if ($filename) {
-                    $src = \Illuminate\Support\Str::startsWith($filename, ['http://', 'https://'])
-                        ? $filename
-                        : asset('storage/' . ltrim($filename, '/'));
-                } else {
-                    // fallback to a local asset if no image is associated
-                    $src = asset('images/web/blue_watch_dark_bg.png');
-                }
+                $filename = $watch->images->first()->filename ?? null;
+ 
+                 if ($filename) {
+                     $src = \Illuminate\Support\Str::startsWith($filename, ['http://', 'https://'])
+                         ? $filename
+                         : asset('storage/' . ltrim($filename, '/'));
+                 }
             @endphp
             <img class="landing__watch-image" src="{{ $src }}" alt="{{ $watch->name }}">
         <p class="landing__watch-name">{{ $watch->name }}</p>
@@ -50,7 +43,7 @@
                 <a class="btn" href="">View Collection</a>
             </div>
             <div class="info-collection-image-wrapper">
-                <img class="info-collection-image" src="{{ asset('images/web/making_watch.png') }}" alt="Watch Image">
+                <img class="info-collection-image" src="{{ asset('storage/web/making_watch.png') }}" alt="Watch Image">
             </div>
         </section>
     </main>

@@ -1,15 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
 use App\Models\Watch;
 
 class WatchController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $watches = Watch::with('images')->get();
-        
+            $q = trim($request->query('q', ''));
+
+        $watches = Watch::with('images')
+            ->when($q, function($query) use ($q) {
+                $query->where(function($qfinder) use ($q) {
+                    $qfinder->where('name', 'like', "%{$q}%");
+                });
+            })
+            ->paginate(20)
+            ->withQueryString();
+
         return view('landing', compact('watches'));
     }
 

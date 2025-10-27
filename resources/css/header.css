@@ -1,4 +1,5 @@
 .header {
+    height: var(--header-height);
     display: flex;
     padding: 0.5rem 2rem;
     justify-content: space-between;

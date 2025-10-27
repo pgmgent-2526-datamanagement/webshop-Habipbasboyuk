@@ -29,25 +29,41 @@
             </div>
         </section>
 
-        <section class="find-watch__results">
-@foreach($watches as $watch)
-    @php
-        $filename = $watch->image->filename ?? null;
-        $src = \Illuminate\Support\Str::startsWith($filename, ['http://','https://'])
-            ? $filename
-            : asset('storage/' . ltrim($filename, '/'));
-    @endphp
+                <section class="find-watch__results">
+            @forelse($watches as $watch)
+                @php
+                    $firstImage = $watch->images->first() ?? ($watch->image ?? null);
+                    $filename = $firstImage->filename ?? (is_string($firstImage) ? $firstImage : null);
+                    $src = null;
 
-    <x-article
-        :title="$watch->name"
-        :image="$src"
-        :excerpt="$watch->description"
-        :price="$watch->price"
-        :watch="$watch"
-        :url="route('detailwatch', $watch->id)"
-        class="find-watch__result"
-    />
-@endforeach
+                    if ($filename) {
+                        $filename = ltrim($filename, '/');
+
+                        if (\Illuminate\Support\Str::startsWith($filename, ['http://','https://'])) {
+                            $src = $filename;
+                        } elseif (file_exists(public_path('storage/' . $filename))) {
+                            $src = asset('storage/' . $filename);
+                        } elseif (file_exists(public_path($filename))) {
+                            $src = asset($filename);
+                        }
+                    }
+                @endphp
+
+                <x-article
+                    :title="$watch->name"
+                    :image="$src"
+                    :excerpt="$watch->description"
+                    :price="$watch->price"
+                    :watch="$watch"
+                    :url="route('detailwatch', $watch->id)"
+                    class="find-watch__result"
+                />
+            @empty
+                <div class="find-watch__not-found">
+                    <h2>Not found</h2>
+                    <p>No watches matched your search.</p>
+                </div>
+            @endforelse
         </section>
     </main>
 </x-layout>

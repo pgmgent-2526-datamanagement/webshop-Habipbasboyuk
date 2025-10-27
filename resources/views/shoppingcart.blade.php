@@ -1,5 +1,4 @@
 <x-layout>
-    <h1>shoppingcart</h1>
     <section class='cart__container'>
         <div class="cart__products">
             @if (auth()->check())

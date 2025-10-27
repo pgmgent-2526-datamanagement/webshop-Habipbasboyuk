@@ -1,7 +1,8 @@
 
 .detail__related {
     color: white;
-
+    height: max-content;
+    padding: 2rem 0 5rem 0;
     .detail__related-title {
         font-size: 3rem;
         text-align: center;
