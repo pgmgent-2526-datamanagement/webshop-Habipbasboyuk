@@ -53,6 +53,12 @@
                     <p>No watches matched your search.</p>
                 </div>
             @endforelse
+            @if (method_exists($watches, 'links'))
+                <div class='find-watch__pagination'>
+                    {{ $watches->links('components.pagination') }}
+                </div>
+                
+            @endif
         </section>
     </main>
 </x-layout>

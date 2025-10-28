@@ -23,7 +23,7 @@ class FindController extends Controller {
             ->when($max !== null && $max !== '', function($query) use ($max) {
                 $query->where('price', '<=', (float) $max);
             })
-            ->paginate(20)
+            ->paginate(2)
             ->withQueryString();
 
         return view('findwatch', compact('watches'));

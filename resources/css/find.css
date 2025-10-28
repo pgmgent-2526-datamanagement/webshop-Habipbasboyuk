@@ -72,3 +72,32 @@
     }
 }
 
+.find-watch__pagination {
+    position: absolute;
+    bottom: 1rem;
+    
+    .non-active-page, .active-page {
+        color: var(--rare-color);
+        border: 2px solid var(--rare-color);
+        padding: 0.3rem 0.8rem; 
+    }
+
+    .non-active-page {
+        font-size: 1.5rem;
+    }
+
+    .active-page {
+    font-size: 2rem;
+}
+
+.arrow-back, .arrow-next {
+    color: var(--rare-color);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.arrow-last {
+    display: none;
+}
+}
+
