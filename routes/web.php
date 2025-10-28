@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [WatchController::class, 'landing'])->name('home');
-Route::get('/findwatch', [FindController::class, 'index']);
+Route::get('/findwatch', [FindController::class, 'index'])->name('findwatch');
 Route::get('/find', [WatchController::class, 'index'])->name('watches.find');
 
 Route::get('/watches/{watch}', [WatchController::class, 'show'])->name('detailwatch');

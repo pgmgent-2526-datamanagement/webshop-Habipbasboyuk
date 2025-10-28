@@ -24,6 +24,11 @@
 
                 <button type="submit" class="login__button">Login</button>
             </form>
+
+            <p class="login__register-text">
+                Don't have an account?
+                <a href="{{ route('register') }}" class="login__register-link">Register here</a>
+            </p>
         </section>
     </main>
 </x-layout>

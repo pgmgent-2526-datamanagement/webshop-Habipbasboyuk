@@ -39,22 +39,22 @@
     
                 <div class="register__field">
                     <label class="register__label">Adress</label>
-                    <input class="register__input" type="text" name="adress" value="{{ old('adress') }}">
+                    <input class="register__input" type="text" name="adress" value="{{ old('adress') }}" required>
                 </div>
 
                 <div class="register__field">
                     <label class="register__label">Postal Code</label>
-                    <input class="register__input" type="text" name="postal_code" value="{{ old('postal_code') }}">
+                    <input class="register__input" type="text" name="postal_code" value="{{ old('postal_code') }}" required>
                 </div>
 
                 <div class="register__field">
                     <label class="register__label">City</label>
-                    <input class="register__input" type="text" name="city" value="{{ old('city') }}">
+                    <input class="register__input" type="text" name="city" value="{{ old('city') }}" required>
                 </div>
 
                 <div class="register__field">
                     <label class="register__label">Country</label>
-                    <input class="register__input" type="text" name="country" value="{{ old('country') }}">
+                    <input class="register__input" type="text" name="country" value="{{ old('country') }}" required>
                 </div>
 
                 

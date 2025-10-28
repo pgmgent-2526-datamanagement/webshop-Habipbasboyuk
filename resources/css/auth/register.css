@@ -16,3 +16,11 @@
     border-radius: var(--border-radius-small);
     font-size: 1rem;
 }
+
+.register__button {
+    background-color: var(--rare-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}

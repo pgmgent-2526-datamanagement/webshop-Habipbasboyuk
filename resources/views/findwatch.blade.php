@@ -9,23 +9,12 @@
             </div>
 
             <div class="find-watch__panel">
-                <div class="find-watch__filters">
-                    <button class="find-watch__filter find-watch__filter--new">New</button>
-                    <button class="find-watch__filter find-watch__filter--limited">Limited</button>
-                    <button class="find-watch__filter find-watch__filter--classic">Classic</button>
-                    <button class="find-watch__filter find-watch__filter--adventure">Adventure</button>
-                    <button class="find-watch__filter find-watch__filter--min-price">Min. price</button>
-                    <button class="find-watch__filter find-watch__filter--max-price">Max. price</button>
-                    <button class="find-watch__filter find-watch__filter--materials">Materials</button>
-                    <button class="find-watch__filter find-watch__filter--functions">Functions</button>
-                </div>
-
-                <p class="find-watch__or">Or</p>
-
-                <form class="find-watch__search" action="{{ route('watches.find') }}" method="get">
-                     <input class="find-watch__search-input" type="search" name="q" placeholder="Type your watch">
-                     <button class="find-watch__search-button" type="submit">Search &gt;</button>
-                 </form>
+                <form class="find-watch__search" action="{{ route('findwatch') }}" method="get">
+                    <input class="find-watch__search-input" type="search" name="q" value="{{ request('q') }}" placeholder="Type your watch">
+                    <input class="find-watch__search-input" type="number" name="min" value="{{ request('min') }}" placeholder="Min price" step="0.01" min="0">
+                    <input class="find-watch__search-input" type="number" name="max" value="{{ request('max') }}" placeholder="Max price" step="0.01" min="0">
+                    <button class="find-watch__search-button" type="submit">Search &gt;</button>
+                </form>
             </div>
         </section>
 

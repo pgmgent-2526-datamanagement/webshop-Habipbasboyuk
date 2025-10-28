@@ -14,14 +14,12 @@ class WatchForm
             ->components([
                 TextInput::make('name')
                     ->required(),
-                TextInput::make('short_description')
-                    ->required(),
+                TextInput::make('short_description'),
                 TextInput::make('price')
                     ->required()
                     ->numeric()
                     ->prefix('$'),
-                Toggle::make('isautomatic')
-                    ->required(),
+                Toggle::make('isautomatic'),
                 TextInput::make('stock')
                     ->required()
                     ->numeric(),

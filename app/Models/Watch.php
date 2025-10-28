@@ -15,7 +15,8 @@ class Watch extends Model
         'name',
         'brand', 
         'price',
-        'description',
+        'short_description',
+        'isautomatic',
         'image'
     ];
 
